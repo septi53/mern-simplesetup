@@ -5,8 +5,8 @@
   "main": "./server.mjs",
   "scripts": {
     "development": "nodemon",
-    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "NODE_ENV=production node ./dist/server.generated.js"
+    "build": "webpack --config webpack.config.client.production.mjs && webpack --mode=production --config webpack.config.server.mjs",
+    "start": "NODE_ENV=production node ./dist/server.generated.mjs"
   },
   "keywords": [],
   "author": "",
