@@ -23,3 +23,18 @@ cross-env NODE_ENV=production node ./dist/server.generated.js
 Jika MongoDB belum aktif:
 • pastikan MongoDB running di lokal
 • default URL: mongodb://localhost:27017/mernSimpleSetup
+
+Update:
+script yang lebih jelas:
+• npm run dev → mode development
+• npm run build → build production bundle
+• npm run prod → jalankan server produksi
+• npm start → alias ke npm run prod
+Cara pakai:
+- npm run dev untuk development, lalu buka: http://localhost:3000
+- Untuk produksi: 
+npm run build
+npm run prod
+Atau cukup:
+npm start
+Sekarang script lebih standard dan tidak membingungkan.

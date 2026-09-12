@@ -4,9 +4,11 @@
   "description": "",
   "main": "./server.mjs",
   "scripts": {
-    "development": "cross-env NODE_ENV=development nodemon",
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "development": "npm run dev",
     "build": "webpack --config webpack.config.client.production.mjs && webpack --config webpack.config.server.mjs --mode=production",
-    "start": "cross-env NODE_ENV=production node ./dist/server.generated.mjs"
+    "prod": "cross-env NODE_ENV=production node ./dist/server.generated.js",
+    "start": "npm run prod"
   },
   "keywords": [],
   "author": "",
