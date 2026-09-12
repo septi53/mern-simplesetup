@@ -1,3 +1,7 @@
+Hal 155 --> Fullstack React Project
+
+
+
 Di project ini ada 2 mode:
 1) Development
 • backend + webpack dev middleware jalan bersama
