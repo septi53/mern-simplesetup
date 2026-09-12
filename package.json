@@ -6,7 +6,7 @@
   "scripts": {
     "development": "cross-env NODE_ENV=development nodemon",
     "build": "webpack --config webpack.config.client.production.mjs && webpack --config webpack.config.server.mjs --mode=production",
-    "start": "cross-env NODE_ENV=production node ./dist/server.generated.js"
+    "start": "cross-env NODE_ENV=production node ./dist/server.generated.mjs"
   },
   "keywords": [],
   "author": "",
