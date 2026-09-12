@@ -9,11 +9,11 @@ const config = {
     devtool: 'eval-source-map',
     entry: [
         'webpack-hot-middleware/client?reload=true',
-        path.join(CURRENT_WORKING_DIR, 'client/main.js')
+        path.join(CURRENT_WORKING_DIR, 'client/main.mjs')
     ],
     output: {
         path: path.join(CURRENT_WORKING_DIR , '/dist'),
-        filename: 'bundle.js',
+        filename: 'bundle.mjs',
         publicPath: '/dist/'
     },
     module: {
