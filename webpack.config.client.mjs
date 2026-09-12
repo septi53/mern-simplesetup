@@ -4,6 +4,7 @@ import webpack from 'webpack';
 const CURRENT_WORKING_DIR = process.cwd();
 
 const config = {
+    name: "browser",
     mode: "development",
     devtool: 'eval-source-map',
     entry: [
@@ -20,9 +21,7 @@ const config = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: [
-                    'babel-loader'
-                ]
+                use: ['babel-loader']
             }
         ]
     },
