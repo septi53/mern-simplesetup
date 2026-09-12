@@ -4,14 +4,13 @@
   "description": "",
   "main": "./server.mjs",
   "scripts": {
-    "development": "nodemon",
-    "build": "webpack --config webpack.config.client.production.mjs && webpack --mode=production --config webpack.config.server.mjs",
-    "start": "NODE_ENV=production node ./dist/server.generated.js"
+    "development": "cross-env NODE_ENV=development nodemon",
+    "build": "webpack --config webpack.config.client.production.mjs && webpack --config webpack.config.server.mjs --mode=production",
+    "start": "cross-env NODE_ENV=production node ./dist/server.generated.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "@babel/core": "^8.0.5",
     "@babel/preset-env": "^8.0.5",
@@ -27,5 +26,8 @@
     "webpack-dev-middleware": "^8.3.0",
     "webpack-hot-middleware": "^2.26.1",
     "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }

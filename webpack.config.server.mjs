@@ -5,11 +5,12 @@ const CURRENT_WORKING_DIR = process.cwd();
 
 const config = {
     name: "server",
-    entry: [ path.join(CURRENT_WORKING_DIR , './server/server.mjs') ],
+    mode: "production",
     target: "node",
+    entry: [path.join(CURRENT_WORKING_DIR, './server/server.mjs')],
     output: {
-        path: path.join(CURRENT_WORKING_DIR , '/dist/'),
-        filename: "server.generated.mjs",
+        path: path.join(CURRENT_WORKING_DIR, '/dist/'),
+        filename: "server.generated.js",
         publicPath: '/dist/',
         libraryTarget: "commonjs2"
     },
@@ -17,12 +18,15 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(m?js|jsx)$/,
                 exclude: /node_modules/,
-                use: [ 'babel-loader' ]
+                use: ['babel-loader']
             }
         ]
+    },
+    resolve: {
+        extensions: ['.mjs', '.js', '.jsx']
     }
-}
+};
 
 export default config;

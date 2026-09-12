@@ -12,16 +12,18 @@ const config = {
         path.join(CURRENT_WORKING_DIR, 'client/main.mjs')
     ],
     output: {
-        path: path.join(CURRENT_WORKING_DIR , '/dist'),
+        path: path.join(CURRENT_WORKING_DIR, '/dist'),
         filename: 'bundle.mjs',
         publicPath: '/dist/'
     },
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.(m?js|jsx)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                use: {
+                    loader: 'babel-loader'
+                }
             }
         ]
     },
@@ -30,10 +32,8 @@ const config = {
         new webpack.NoEmitOnErrorsPlugin()
     ],
     resolve: {
-        alias: {
-            'react-dom': '@hot-loader/react-dom'
-        }
+        extensions: ['.mjs', '.js', '.jsx']
     }
-}
+};
 
 export default config;

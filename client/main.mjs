@@ -1,5 +1,6 @@
-import React from 'react'
-import { render } from 'react-dom'
-import HelloWorld from './HelloWorld.mjs'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import HelloWorld from './HelloWorld.mjs';
 
-render(<HelloWorld/>, document.getElementById('root'))
+const root = document.getElementById('root');
+createRoot(root).render(<HelloWorld />);
